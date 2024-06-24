@@ -1,0 +1,24 @@
+{"questions":[
+  {"question":"what is the output of the following code ? \n\nconsole.log(1+'2'+'2');",
+  "options":["122","5","14","NaN"],
+  "answer":"122"
+  },
+  {"question":"Which of the following is not a valid javascript variable name ?",
+    "options":["myVar","_myVar","2myVar","$myVar"],
+    "answer":"2myVar"
+  },
+  {"question":"what does CSS stand for?",
+    "options":["Creative Style Sheets","Colorful Style Sheets","Cascading Style Sheets","Computer Style Sheets"],
+   "answer":"Cascading Style Sheets"
+  },
+  {"question":"what is the correct way to include an  external JavaScript file named 'script.js'?",
+    "options":["<script src='script.js'>","<javascript src='script.js'>","<js src='script.js'>","<script href='script.js'>"],
+    "answer":"<script src='script.js'>"
+  },
+  {"question":"what is the output of the following code ? \n\nconsole.log(3==='3');",
+    "options":["true","false","TypeError","SyntaxError"],
+    "answer":"false"
+  }
+
+]
+}
