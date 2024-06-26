@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
+import abc from "../../public/rudra-running-l2r.gif"
 /**
  * Functional component for a quiz application.
  * Manages state for questions, current question index, score, show score flag, selected option, and correctness flag.
@@ -39,17 +40,6 @@ const Quiz = () => {
     setIsCorrect(isAnswerCorrect);
     console.log(isAnswerCorrect)
     setScore((prevScore) => prevScore + (isAnswerCorrect ? 1 : 0));
-
-
-    // console.log(score,"s")
-    // setTimeout(() => {
-    //   const nextQuestion=currentQuestion+1;
-    //   if(nextQuestion<questions.length){
-    //     setCurrentQuestion(nextQuestion);
-    //     setSelectedOption(null);
-    //     setIsCorrect(null);
-    //   }
-    // }, 1000);
   };
   const handleNext=()=>{
     const nextQuestion=currentQuestion+1;
@@ -79,7 +69,7 @@ const restartQuiz=()=>{
 const progress=((currentQuestion+1) / questions.length)*100;
 if (questions.length === 0) {
   return <div className='w-[700px] m-[100px] bg-black text-white text-center flex flex-col items-center justify-center'>
-    <img src='../../public/rudra-running-l2r.gif' alt='boy running'/>Loading questions...</div>;
+    <img src={abc} alt='boy running'/>Loading questions...</div>;
 }
   return (
     <div className='w-[700px] m-[100px] flex items-center flex-col bg-green-300  rounded-[5px] ' style={{border:"1px solid green"}}>
