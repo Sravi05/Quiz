@@ -79,7 +79,7 @@ const restartQuiz=()=>{
 const progress=((currentQuestion+1) / questions.length)*100;
 if (questions.length === 0) {
   return <div className='w-[700px] m-[100px] bg-black text-white text-center flex flex-col items-center justify-center'>
-    <img src='https://www.nickindia.com/wp-content/themes/nick/assets/images/trackvote/rudra-running-l2r.gif'/>Loading questions...</div>;
+    <img src='../../public/rudra-running-l2r.gif' alt='boy running'/>Loading questions...</div>;
 }
   return (
     <div className='w-[700px] m-[100px] flex items-center flex-col bg-green-300  rounded-[5px] ' style={{border:"1px solid green"}}>
