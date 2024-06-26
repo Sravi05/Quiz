@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
-import abc from "../../public/rudra-running-l2r.gif"
+import abc from "../Components/rudra-running-l2r.gif"
 /**
  * Functional component for a quiz application.
  * Manages state for questions, current question index, score, show score flag, selected option, and correctness flag.
