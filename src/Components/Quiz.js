@@ -8,28 +8,52 @@ import abc from "../Components/rudra-running-l2r.gif"
  * Renders a quiz interface with questions, options, and a submit button.
  * @returns JSX element for the quiz application.
  */
+const questions=[
+  {
+    question:"what is the output of the following code ? \n\nconsole.log(1+'2'+'2');",
+  options:["122","5","14","NaN"],
+  answer:"122",
+  },
+  {question:'Which of the following is not a valid javascript variable name ',
+    options:["myVar","_myVar","2myVar","$myVar"],
+    answer:"2myVar",
+  },
+  {"question":"wat does CSS stand for",
+    options:["Creative Style Sheets","Colorful Style Sheets","Cascading Style Sheets","Computer Style Sheets"],
+   answer:"Cascading Style Sheets"
+  },
+  {"question":"wat is the correct way to include an  external JavaScript file named 'script.js'",
+    options:["<script src='script.js'>","<javascript src='script.js'>","<js src='script.js'>","<script href='script.js'>"],
+    answer:"<script src='script.js'>",
+  },
+  {question:"wat is the output of the following code ? \n\nconsole.log(3==='3');",
+    options:["true","false","TypeError","SyntaxError"],
+    answer:"false",
+  },
+
+];
 const Quiz = () => {
-  const[questions,setQuestions]=useState([]);
+  // const[questions,setQuestions]=useState([]);
     const[currentQuestion,setCurrentQuestion]=useState(0)
     const[score,setScore]=useState(0);
     const[showScore,setShowScore]=useState(false);
     const[selectedOption,setSelectedOption]=useState(null);
     const[isCorrect,setIsCorrect]=useState(null); 
-    useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:4000/questions");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const jsonData = await response.json();
-        setQuestions(jsonData);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchData();
-  }, []);
+  //   useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:4000/questions");
+  //       if (!response.ok) {
+  //         throw new Error("Failed to fetch data");
+  //       }
+  //       const jsonData = await response.json();
+  //       setQuestions(jsonData);
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
     const handleAnswer=(selectedOption)=>{
       setSelectedOption(selectedOption);
     const correctAnswer=questions[currentQuestion].answer;
