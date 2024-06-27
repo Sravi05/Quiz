@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import abc from "../Components/rudra-running-l2r.gif"
 /**
  * Functional component for a quiz application.
